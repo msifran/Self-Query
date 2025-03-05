@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    width: 400px;
+    font-family: 'Roboto', sans-serif; 
+  align-items: center;
+  text-align: center;
+    padding: 50px;
+    
+  }
+  .forflex{
+    display:  -webkit-inline-box;;
+  }
+  .forflex .history {
+    margin: 0px 50px;
+  }
+  .container {
+    border: none;
+    border-radius: 20px ;
+   
+    padding: 20px;
+    background-color: #000;
+  }
+  .container h1{
+    color: #fff;
+  }
+  .button{
+    width: 66px;
+    padding: 20px;
+    margin: 0 3px;
+    border: 2px solid black;
+    border-radius: 40px;
+    color: #fefefe;
+    background-color: #1c1c1c;
+   
+    font-size: 18px;
+  }
+  .button:hover {
+    background-color: #505050;
+  }
+  
+  .row{
+    margin: 2px 0;
+  }
+  .row input{
+    width: 291px;
+    
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #fefefe;
+  }
+  .text-center{
+    text-align: center;
+  }
+  
+  .mx-auto{
+    margin: auto;
+  }
+  
+  .flex{
+    display:flex;
+  } 
+  .flex-col{
+    flex-direction: column;
+  }
+  
+  .items-center{
+    align-items: center;
+  }
+
+/* to remove arrows inc/dec from input  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#display {
+  text-align: right;
+}
