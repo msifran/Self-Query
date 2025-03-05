@@ -1,0 +1,10 @@
+.result-box {
+    display: flex;
+}
+
+button {
+    margin: 20px;
+}
+#entries ol {
+    list-style-type: decimal !important;
+}

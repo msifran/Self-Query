@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check calling items</title>
+</head>
+<body>
+    <h2>check How to call API and create divs with that </h2>
+    <input type="text"  id="key" placeholder="enter Id for the value ">
+    <input type="text" id="value" placeholder="Enter value">
+    <input type="number" id="divlength" placeholder="Enter number of div you want ">
+    <button id="submit" onclick="submit()">Submit </button>
+    <div id="parent">
+
+    </div>
+</body>
+<script>
+    function submit () {
+            
+    var size=parseInt(document.getElementById('divlength').value);
+    var key=(document.getElementById('key').textContent);
+    var Value=document.getElementById('value').value;
+    console.log(key);
+    fetch('http://jsonplaceholder.typicode.com/users').then(function(response) {
+  // response.json() returns a promise, use the same .then syntax to work with the results
+  response.json().then(function(users){
+    // users is now our actual variable parsed from the json, so we can use it
+    users.for(function(user){
+      console.log(user.name)
+    });
+  });
+})
+            var objectValue={};
+            objectValue.key=Value;
+            for(let i=0;i<size;i++){
+                var div= document.createElement("div");
+            div.style.backgroundColor="#c1c1c1";
+            
+            div.style.width = "100px";
+            div.style.height = "50px";
+            div.innerHTML="Value is  = "+ objectValue.key ;
+            div.style.margin="20px";
+
+    document.getElementById('parent').appendChild(div);}
+
+    }
+    fetch('http://jsonplaceholder.typicode.com/users').then(function(response) {
+  // response.json() returns a promise, use the same .then syntax to work with the results
+  response.json().then(function(users){
+    // users is now our actual variable parsed from the json, so we can use it
+    users.forEach(function(user){
+      console.log(user.name)
+    });
+  });
+})
+</script>
+</html>

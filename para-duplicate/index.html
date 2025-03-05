@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find duplicate in para </title>
+</head>
+<body>
+    <p id="para">
+        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aspernatur nobis qui recusandae doloremque, quo placeat. Nostrum nesciunt architecto minima beatae facere perspiciatis, quas impedit? Officia aspernatur unde quibusdam odio possimus, deleniti voluptatibus nisi quaerat ullam, sit provident, sapiente commodi est praesentium ad consequuntur recusandae. Corporis quidem accusantium optio facere quae rem? Possimus vel adipisci incidunt vitae numquam odit nam enim? Voluptatem, ducimus quas esse nemo consectetur ab? Voluptatem sed ipsa magni aliquam facere autem, facilis praesentium numquam eveniet provident, neque illum officia doloremque, quam magnam illo aspernatur sunt hic! Fuga, nam dolores? Quae voluptatem pariatur alias eveniet a, magnam fugit sequi asperiores corrupti harum voluptas, facilis is sequi perferendis natus. Neque reiciendis saepe facilis eum non? Quam magnam sint saepe perferendis recusandae reprehenderit voluptas reiciendis. Vero excepturi porro ea repellat voluptates, consequatur voluptatem cum maiores quibusdam.Lorem
+        <br>
+        <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil aspernatur voluptatibus et consectetur eius expedita iure exercitationem, architecto officia provident! Corrupti eaque totam architecto! Corporis et non aspernatur est labore fugit! Quos quis aut perferendis illo a voluptate labore maxime autem! Consequuntur, quo! Nostrum sint tempora sit iure impedit a facere aspernatur suscipit nam quae ex, sunt voluptatibus veniam rem, distinctio cumque reiciendis debitis? Quae molestias distinctio debitis ullam, perspiciatis ipsam explicabo repudiandae cum, consequuntur exercitationem nisi quas cumque sint dolorem pariatur possimus corrupti rem consequatur qui laborum? Molestias excepturi dolorem vel! Tenetur tis consequatur architecto maiores voluptates, eaque maxime sint laborum, repellendus amet tenetur nam aliquid rerum doloremque impedit veritatis obcaecati? Suscipit sequi mollitia et enim ea ipsa? -->
+
+        hello hii check check check how are you and hii check bye
+    </p>
+    
+    <h2>Duplicate values are : </h2>
+    <p id="Output"></p>
+</body>
+<script>
+    let text = document.getElementById('para').textContent.trim();
+    const myArray = text.split(" ");
+  
+    var output=[];
+   for(let i=0; i<myArray.length ; i++){
+        let count =0;
+        let AlreadyChecked=false;
+        for(let j =0 ; j<output.length; j++){
+            if(output[j]===myArray[i]){
+                AlreadyChecked=true;
+                break;
+            }
+        }
+        if(AlreadyChecked){
+            continue;
+        }
+        for(let k =0 ; k<myArray.length; k++){
+            if(myArray[k]===myArray[i]){
+                count++;
+            }
+        }
+        if(count>  1){
+            
+            output[output.length]=myArray[i];
+            output[(output.length)]=count;
+
+        }
+
+
+   }
+   console.log(output);
+</script>
+</html>

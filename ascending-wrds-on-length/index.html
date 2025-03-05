@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asecind on the basisi of length of word</title>
+</head>
+<body>
+    <h3>this is ascend on the lenth basis of word </h3>
+    <p id="para">
+        hello my name is ssssssllllllkkkkkkk258nnnbu 74 25 1 and this is my adress asdfghjklkjhgfdsdfghj 23 45 12 
+    </p>
+    
+    <button onclick="asc()" >click to ascending</button>
+    <button onclick="dsc()">click to descending</button>
+    <p id="asce"></p>
+    <p id="dsce"></p>
+</body>
+<script>
+    let para=document.getElementById('para').textContent.trim();
+    let myArray=para.split(" ");
+    let secondArray=document.getElementById('para').textContent.trim().split(" ");
+    let checkArray =document.getElementById('para').textContent.trim().split(" ");
+    let waw=[];
+    let maw=[];
+    for(let i=0;i<checkArray.length;i++){
+        let num=parseInt(checkArray[i] );
+        
+       if(isNaN(num)){
+        maw[maw.length]=checkArray[i];
+       
+       }else {
+        waw[waw.length]=checkArray[i];
+       }
+        
+    }
+    console.log(maw);
+    console.log(waw);
+
+    
+
+    function asc(){
+
+    for(let i=0; i<myArray.length;i++){
+        for(let j =0 ; j<maw.length-1; j++){
+            let elementFirst=maw[j].length;
+            let elementSecond=maw[j+1].length;
+            if(elementFirst>elementSecond){
+                let temp= maw[j];
+                maw[j]=maw[j+1];
+                maw[j+1]=temp;
+
+            }
+        }
+        for(let j =0 ; j<waw.length-1; j++){
+            let elementFirst=waw[j];
+            let elementSecond=waw[j+1];
+            if(elementFirst>elementSecond){
+                let temp= waw[j];
+                waw[j]=waw[j+1];
+                waw[j+1]=temp;
+
+            }
+        }
+    }
+    myArray=waw.concat(maw);
+    document.getElementById('asce').innerHTML=myArray;
+    }
+
+    function dsc(){
+     
+for(let i=0; i<secondArray.length;i++){
+    for(let j =0 ; j<maw.length-1; j++){
+        let elementFirst=maw[j].length;
+        let elementSecond=maw[j+1].length;
+       
+        if(elementFirst<elementSecond){
+            let temp= maw[j];
+            maw[j]=maw[j+1];
+            maw[j+1]=temp;
+
+        }
+    }
+    for(let j =0 ; j<waw.length-1; j++){
+        let elementFirst=waw[j];
+        let elementSecond=waw[j+1];
+       
+        if(elementFirst<elementSecond){
+            let temp= waw[j];
+            waw[j]=waw[j+1];
+            waw[j+1]=temp;
+
+        }
+    }
+}
+secondArray=maw.concat(waw);
+document.getElementById('dsce').innerHTML=secondArray;
+}
+   
+</script>
+</html>
