@@ -97,9 +97,7 @@ function opr(event) {
        
     }
     isResult = false;
-    console.log(firstOperand,typeof(firstOperand));
-    console.log(newOperator);
-    
+  
 }
 
 function calculate() {
